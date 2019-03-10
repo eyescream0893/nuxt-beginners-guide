@@ -4,14 +4,14 @@
             <div slot="header" class="clear-fix">
                 <span>新着投稿</span>
             </div>
-            <el-tab :data="showPosts" style="width: 100%" class="table">
-                <el-table-colum prop="title" lable="タイトル">
-                </el-table-colum>
-                <el-table-colum prop="user.id" lable="投稿者" width="180">
-                </el-table-colum>
-                <el-table-colum prop="created_at" lable="投稿日時" width="240">
-                </el-table-colum>
-            </el-tab>
+            <el-table :data="showPosts" style="width: 100%" class="table">
+                <el-table-column prop="title" lable="タイトル">
+                </el-table-column>
+                <el-table-column prop="user.id" lable="投稿者" width="180">
+                </el-table-column>
+                <el-table-column prop="created_at" lable="投稿日時" width="240">
+                </el-table-column>
+            </el-table>
         </el-card>
     </section>
 </template>
@@ -20,7 +20,7 @@
 <script>
 export default {
     computed: {
-        showPost() {
+        showPosts() {
             return [
                 {
                     id: '001',

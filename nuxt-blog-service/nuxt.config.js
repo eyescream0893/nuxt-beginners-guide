@@ -7,7 +7,9 @@ module.exports = {
   axios: {
     baseURL: 'https://nuxt-blog-service-40903.firebaseio.com'
   },
-
+  router: {
+    middleware: ['auth-cookie']
+  },
   /*
   ** Headers of the page
   */
@@ -46,6 +48,7 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/axios',
   ],
 
   /*
@@ -53,12 +56,10 @@ module.exports = {
   */
   build: {
     transpile: [/^element-ui/],
-    
     /*
     ** You can extend webpack config here
     */
     extend(config, ctx) {
-      
     }
   }
 }
